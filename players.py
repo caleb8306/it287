@@ -5,6 +5,7 @@ from rich.text import Text
 from rich import print
 
 from dice import roll_dice, roll3d6, rolld6, roll3d6stat
+from config import p, e
 
 class PlayerCharacter:
     def __init__(self, name):
@@ -15,6 +16,7 @@ class PlayerCharacter:
         self.ag = 8
         self.armor = 2
         self.roll_stats()
+        p("Player Character class printed.")
 
     def __str__(self):
         return f"| {self.name} | HP: {self.current_hp}/{self.get_max_hp()} | STR: {self.str} | CON: {self.con} | AG: {self.ag} |"
@@ -40,7 +42,8 @@ class PlayerCharacter:
     def heal(self):
         rolls, heal = roll_dice(5)
         self.current_hp = self.current_hp + heal
-        print(f"{self.name} heald for {heal} hit points.")
+        print(f"{self.name} healed for {heal} hit points.")
+        p(f"Succesfully healed for {heal} hit points.")
 
     def is_knocked_out(self):
         if self.current_hp < 1:
@@ -79,6 +82,7 @@ class PlayerCharacter:
             "armor": str(self.armor),
             "current_hp": str(self.current_hp)
         }
+        p("Saved to JSON.")
         try:
             try:
                 with open(file_path, "r", encoding="utf-8") as f:
@@ -123,6 +127,7 @@ def LoadAllCharacters(file_path="players.json"):
         return players
     except Exception as e:
         print(f"[!] Failed to load JSON: {e}")
+        e("Failed to load to JSON.")
         return False
     
 

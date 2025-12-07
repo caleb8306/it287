@@ -1,13 +1,18 @@
 import random
 
+from config import p, e
+
 def roll_dice(sides=6, count=1):
     rolls = list()
     total = 0
+    p(f"Rolling {count} dice with {sides} sides.")
     for i in range(count):
         roll = random.randint(1, sides)
         total += roll
         rolls.append(roll)
+        p(f"Rolled {roll} - Total: {total}")
 
+    p(f"Total of rolls: {total}")
     return rolls, total
 def roll3d6stat():
     rolls, total = roll3d6()
@@ -16,15 +21,22 @@ def roll3d6stat():
     return total
 
 def roll3d6():
+    p("3d6 Rolled")
     return roll_dice(sides=6, count=3)
+    
+
+
 
 def roll2d10():
+    p("2d10 Rolled")
     return roll_dice(sides=10, count=2)
 
 def rolld6(count=1):
+    p("d6 Rolled")
     return roll_dice(sides=6, count=count)
 
 def rolld4(count=1):
+    p("d4 Rolled")
     return roll_dice(sides=4, count=count)
 
 
