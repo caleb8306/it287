@@ -11,11 +11,11 @@
   {
     "name": "Harold",
     "race": "Unknown",
-    "strength": "12",
+    "strength": "13",
     "agility": "8",
-    "constitution": "8",
+    "constitution": "13",
     "armor": "2",
-    "current_hp": "16"
+    "current_hp": "26"
   },
   {
     "name": "Wizard",
@@ -66,9 +66,9 @@
     "name": "Frank",
     "race": "Unknown",
     "strength": "8",
-    "agility": "8",
-    "constitution": "14",
+    "agility": "15",
+    "constitution": "12",
     "armor": "2",
-    "current_hp": "28"
+    "current_hp": "24"
   }
 ]
