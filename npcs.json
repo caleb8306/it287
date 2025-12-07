@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Frank",
+    "race": "Unknown",
+    "strength": "8",
+    "agility": "13",
+    "constitution": "9",
+    "armor": "2",
+    "current_hp": "18"
+  },
+  {
+    "name": "Harold",
+    "race": "Unknown",
+    "strength": "11",
+    "agility": "15",
+    "constitution": "13",
+    "armor": "2",
+    "current_hp": "26"
+  },
+  {
+    "name": "Gorak",
+    "race": "Unknown",
+    "strength": "8",
+    "agility": "12",
+    "constitution": "8",
+    "armor": "2",
+    "current_hp": "10"
+  }
+]
